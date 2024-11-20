@@ -1,0 +1,30 @@
+.wp-block-orion-myblocks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @for $i from 1 through 4 {
+        &.the-#{$i}-columns {
+            .wp-block-orion-myblock {
+                width: calc(100% / #{$i} - 10px);
+            }
+        }
+    }
+
+    .wp-block-orion-myblock {
+        margin-bottom: 20px;
+        background-color: #f5f5f5;
+        padding: 20px;
+        border-radius: 30px;
+        box-sizing: border-box;
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+    }
+}
